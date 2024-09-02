@@ -1,0 +1,164 @@
+/* Importa a fonte 'Lato' do Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* Define a largura do container e aplica margens automáticas */
+.container {
+  margin: 30px auto;
+  width: 400px;
+}
+
+/* Estilo para o título principal, adicionando espaçamento entre letras e removendo margens */
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Estilo para títulos de nível 3, adicionando uma borda inferior e espaçamento */
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+/* Estilo para títulos de nível 4, removendo margens e transformando o texto em maiúsculas */
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Contêiner para seções de renda e despesas, com fundo branco, sombra e espaçamento */
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+/* Estilo para as divisões dentro do contêiner de renda e despesas, centralizando o texto */
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+/* Adiciona uma borda à direita na primeira divisão do contêiner de renda e despesas */
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+/* Estilo para elementos com a classe 'money', ajustando o tamanho da fonte e o espaçamento entre letras */
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+/* Define a cor do texto para elementos que representam renda */
+.money.plus {
+  color: #2ecc71;
+}
+
+/* Define a cor do texto para elementos que representam despesas */
+.money.minus {
+  color: #c0392b;
+}
+
+/* Estilo para rótulos (labels), adicionando margem */
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+/* Estilo para inputs de texto e número, com borda, padding e largura total */
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+/* Estilo para inputs quando o cursor passa sobre eles, mudando a cor da borda */
+input:hover {
+  border: 1px solid black;
+}
+
+/* Estilo para botões, com cursor, cor de fundo, sombra, cor do texto, e transições */
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  transition: background-color 1s; 
+}
+
+/* Estilo para botões ao passar o mouse, mudando a cor de fundo */
+.btn:hover {
+  background-color: #7264bb;
+}
+
+/* Remove a borda ao focar em botões ou no botão de deletar */
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+/* Remove os marcadores e o padding das listas, adicionando margem inferior */
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+/* Estilo para itens de lista, com fundo branco, sombra, espaçamento e cor de borda */
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Adiciona uma borda verde à direita para itens de lista que representam renda */
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+/* Adiciona uma borda vermelha à direita para itens de lista que representam despesas */
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+/* Estilo para o botão de deletar, escondido inicialmente */
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Exibe o botão de deletar quando o cursor passa sobre o item da lista */
+.list li:hover .delete-btn {
+  opacity: 1;
+}
